@@ -9,3 +9,10 @@
 - 제대로 공부하기 위해
 - 안드로이드 개발자로 전향하기 위해
 
+## Kotlin
+
+- [변수와 상수](./kotlin/variable.md)
+- [자료형](./kotlin/datatype.md)
+- [함수](./kotlin/function.md)
+- [String Template](./kotlin/stringtemplate.md)
+- [제어문](./kotlin/controlflow.md)
