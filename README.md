@@ -16,3 +16,6 @@
 - [함수](./kotlin/function.md)
 - [String Template](./kotlin/stringtemplate.md)
 - [제어문](./kotlin/controlflow.md)
+- [자료구조](./kotlin/datastructure.md)
+- [객체와 클래스](./kotlin/object-class.md)
+- [추상클래스](./kotlin/abstract-class.md)
