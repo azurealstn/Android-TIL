@@ -60,3 +60,31 @@ val car2 = Car("Blue", "Tesla") // 보조 생성자
 - 주 생성자를 보완할 수 있는 것이 보조 생성자이다.
 - 주 생성자말고 여러 생성자를 생성하려고 할 때 사용한다.
 - 보조 생성자를 사용할 경우 `this` 키워드를 사용하여 주 생성자에게 생성을 위임한다.
+
+## 상속
+
+```kotlin
+open class Animal(val name: String, val cry: String) {
+    fun printName() {
+        println(name)
+    }
+
+    open fun crying() {
+        println(cry)
+    }
+}
+
+class Dog(name: String, cry: String): Animal(name, cry) {
+
+    override fun crying() {
+        println("$cry Dog")
+    }
+}
+
+val dog = Dog("Poppy", "멍멍")
+dog.printName()
+dog.crying()
+```
+
+- 부모 클래스는 `open` 키워드를 붙여준다.
+- 오버라이딩하려면 부모 클래스의 메서드에 `open` 붙여주고, 자식 클래스에서는 메서드 옆에 `override` 키워드를 사용한다.
