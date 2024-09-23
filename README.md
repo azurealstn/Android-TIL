@@ -26,3 +26,7 @@
 - [Null 처리](./kotlin/null.md)
 - [lateinit & lazy](./kotlin/lateinit-lazy.md)
 - [람다 표현식](./kotlin/lambda.md)
+
+## Android
+
+- [액티비티](./android/activity.md)
