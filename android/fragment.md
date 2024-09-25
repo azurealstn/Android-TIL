@@ -5,7 +5,7 @@
 - 즉, 다른 액티비티에서 이 프래그먼트를 재활용할 수 있다.
 - 또한 가볍기 때문에 모던 안드로이드 프로그래밍에서 굉장히 많이 쓰인다.
 
-![fragment](../images/fragment.png)
+![fragment](./images/fragment.png)
 
 ## 특징
 
@@ -15,7 +15,7 @@
 
 ## 생명주기
 
-![fragment-lifecycle](../images/fragment-lifecycle.png)
+![fragment-lifecycle](./images/fragment-lifecycle.png)
 
 - `onAttach()`: 해당 프래그먼트가 액티비티에 추가되었다는 것을 알려준다.
 - `onCreate()`: 프래그먼트가 최초로 생성된 시점에 호출되는 함수이다. 프래그먼트를 초기화하는 코드를 넣는다.
@@ -38,3 +38,11 @@ fragmentTransaction.commit()
 ```
 
 - 프래그먼트에서 화면전환을 하려면 FragmentTransaction 객체를 가져와야 한다.
+
+<br>
+<br>
+<br>
+
+## References
+
+- [[2023 코틀린 강의 무료제공] 기초에서 수익 창출까지, 안드로이드 프로그래밍 A-Z](https://www.inflearn.com/course/%EC%8C%A9%EC%B4%88%EB%B3%B4-%EC%95%88%EB%93%9C%EB%A1%9C%EC%9D%B4%EB%93%9C-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D-%EC%88%98%EC%9D%B5)

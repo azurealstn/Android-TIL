@@ -14,7 +14,7 @@
 
 | 보편적으로 뷰 그룹은 레이아웃, 위젯은 뷰라고 부른다.
 
-![view](../images/view.png)
+![view](./images/view.png)
 
 ## 너비와 높이
 
@@ -25,25 +25,56 @@ layout_width는 뷰의 너비를 지정하고, layout_height는 뷰의 높이를
 
 ## dp 단위
 
-![dp1](../images/dp1.png)
+![dp1](./images/dp1.png)
 
 픽셀의 경우 저해상도의 픽셀 크기와 고해상도의 픽셀 크기가 차이가 난다. 즉, 고해상도 일수록 픽셀의 크기가 작아지게 되는데 이처럼 안드로이드에서 픽셀 단위를 사용하게 되면 여러 해상도의 디바이스에서 크기가 모두 뒤죽박죽으로 보이게 된다.
 
-![dp2](../images/dp2.png)
+![dp2](./images/dp2.png)
 
 그래서 픽셀의 단점을 보완한 것이 바로 `dp` 단위이다. density-independent pixel의 약자로 해상도에 독립적이라는 의미이다. 즉, 해상도에 따라 크기가 변하는 픽셀과 달리 dp는 해상도에 관계없이 이미지를 같은 크기로 표현하는 것이 가능하다. dp를 사용하면 AOS에서 기기의 해상도에 맞춰 자동으로 픽셀값을 조정해준다. 따라서 dp 단위를 사용하게 되면 안드로이드를 사용하게 되는 모든 유저들은 똑같은 크기로 볼 수 있게 된다.
 
-![dpi](../images/dpi.png)
+![dpi](./images/dpi.png)
 
 안드로이드는 위 사진처럼 5가지의 대표적인 DPI가 있다. DPI는 dot per inch의 약자로 1인치당 들어가는 픽셀 개수를 뜻한다. 예를 들어, 160DPI는 1인치에 160개의 픽셀이 들어있는 것이다. DPI가 높을수록 당연히 해상도도 높다.
 
 ## 패딩과 마진
 
-![margin-padding](../images/margin-padding.png)
+![margin-padding](./images/margin-padding.png)
 
 - 패딩과 마진은 웹의 CSS에서의 패딩과 마진 개념과 같다.
 - `layout_marginHorizontal`: left, right만 적용
 - `layout_marginVertical`: top, bottom만 적용
+
+## 텍스트뷰
+
+- 액티비티의 텍스트들 모두 텍스트뷰이다.
+- `textSize`: 텍스트 사이즈는 sp 단위를 사용한다. dp 단위의 경우 안드로이드 기본설정에서 글자 크기를 키워도 일정한 크기를 유지하는 반면 sp 단위는 유동적으로 같이 커지는 효과가 있다.
+
+## 이미지뷰
+
+- 이미지들을 보여주는 것이 이미지뷰이다.
+- `src` 속성을 사용하여 이미지를 불러온다.
+- `scaleType`: 이미지의 비율을 지정해준다. (CSS의 background-size와 비슷하다.)
+    - `fitCenter`: Default값. 가로 혹은 세로 중 한 방향의 끝까지 스케일된다. (비율을 유지할 수 있다.)
+    - `fitXY`: 가로 세로 방향으로 빈틈없이 가득 채운다. (이미지가 변형될 수 있다. 이게 싫다면 `centerCrop`을 사용한다.)
+    - `center`: 스케일 없이 가운데 정렬하고 나머지는 잘린다.
+    - `centerCrop`: 이미지 비율을 유지한 상태로 스케일 후 그대로 자른다.
+
+![scale-type](./images/scale-type.png)
+
+## 버튼
+
+- 버튼은 기본적으로 텍스트뷰를 상속하고 있기 때문에 텍스트뷰의 속성을 모두 가지고 있다.
+- 버튼의 용도는 유저와 상호작용하기 위해서이다.
+
+## 에디트텍스트
+
+- 사용자가 텍스트를 입력할 수 있는 뷰를 에디트 텍스트라 한다. (HTML의 Input 태그와 비슷하다.)
+- `inputType` 속성을 사용하면 아래 유형들을 선택할 수 있다.
+    - textPassword
+    - phone
+    - textEmailAddress
+    - datetime
 
 <br>
 <br>

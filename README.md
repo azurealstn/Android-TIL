@@ -32,3 +32,4 @@
 - [액티비티](./android/activity.md)
 - [프래그먼트](./android/fragment.md)
 - [뷰](./android/view.md)
+- [레이아웃](./android/layout.md)
