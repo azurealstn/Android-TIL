@@ -65,6 +65,70 @@ layout_weight 속성은 각 뷰의 비중을 지정할 수 있다.
 
 - 기준이 되는 뷰는 반드시 `id` 속성값이 있어야 한다.
 
+## 컨스트레인트 레이아웃
+
+컨스트레인트 레이아웃은 실무에서 가장 많이 사용하는 만큼 가장 중요한 레이아웃이다. 말그대로 제약을 줌으로써, 다양한 화면 크기에 대응하는 반응형 UI를 쉽게 구성할 수 있다. 또한 중첩된 레이아웃을 사용하면 많은 리소스를 잡아먹기 때문에 앱이 느려지기 때문에 중첩된 레이아웃을 사용하지 않고도 크고 복잡한 레이아웃을 만들 수 있어 성능면에서 유용하다.
+
+| 기본 속성
+
+뷰의 위치를 배치시키려면 반드시 아래 두 가지를 추가해주어야 한다.
+
+- 수직 방향 제약
+- 수평 방향 제약
+
+사용 방법은 아래와 같이 사용한다.
+
+![constraint-layout1](./images/constraint-layout1.png)
+
+```xml
+<Button
+    android:id="@+id/button1"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    android:layout_marginStart="100dp"
+    android:layout_marginTop="200dp"
+    android:text="button1"/>
+
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="텍스트뷰!"
+    app:layout_constraintTop_toBottomOf="@+id/button1"
+    app:layout_constraintStart_toEndOf="@+id/button1" />
+```
+
+![constraint-layout2](./images/constraint-layout2.png)
+
+- 참고로 컨스트레인트 레이아웃에서 제약을 주어야 마진이 적용된다.
+- 다른 뷰를 기준으로 제약을 추가해줄 수 있다.
+
+| 0dp
+
+높이나 너비에 제약을 맞추는 것과 같다.
+
+![constraint-layout3](./images/constraint-layout3.png)
+
+- `layout_width=wrap_content`는 크기가 텍스트 크기에 맞춰진다.
+- 제약은 `EndtoEndOf`로 BUTTON1의 끝과 부모 레이아웃의 끝에 추가된 상태에서 `0dp(match_constraint)` 로 변경하게 되면 어떻게 될까?
+
+![constraint-layout4](./images/constraint-layout4.png)
+
+- 제약의 시작(BUTTON1 의 끝)과 끝(부모 레이아웃의 끝)에 너비가 맞추어진다. (여백이 없어졌다.)
+
+## 반응형 UI: Guideline
+
+![guideline](./images/guideline.png)
+
+가이드라인은 실제 화면에는 보이지 않으며, 레이아웃을 구성할 때만 사용되는 도구이다. 다양한 디바이스의 해상도에서 일정한 비율로 레이아웃을 구성하고 싶을 때 굉장히 유용하게 사용할 수 있다.
+
+| 기본 속성
+
+- `android:orientation="vertical"`: 가이드라인의 방향 지정
+- `app:layout_constraintGuide_begin="20dp"`: 시작 지점에서 몇 dp 만큼 가이드라인이 떨어지는지 지정
+- `app:layout_constraintGuide_percent="0.3"`: 시작 지점에서 몇 % 만큼 가이드라인이 떨어지는지 지정 (0~1 설정, 0.3->30%)
+
 <br>
 <br>
 <br>
