@@ -6,8 +6,6 @@
 
 - 그 순간에 공부한 내용은 몇일이 지나면 까먹을 수 있기 때문에
 - 문서처럼 언제든지 참고하기 위해
-- 제대로 공부하기 위해
-- 안드로이드 개발자로 전향하기 위해
 
 ## Kotlin
 
@@ -34,5 +32,6 @@
 - [뷰](./android/view.md)
 - [레이아웃](./android/layout.md)
 - [스레드](./android/thread.md)
+
 - [baseline & chain](./android/baseline-chain.md)
 - [colors.xml & strings.xml](./android/colors-strings.md)
