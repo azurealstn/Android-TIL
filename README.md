@@ -34,3 +34,5 @@
 - [뷰](./android/view.md)
 - [레이아웃](./android/layout.md)
 - [스레드](./android/thread.md)
+- [baseline & chain](./android/baseline-chain.md)
+- [colors.xml & strings.xml](./android/colors-strings.md)
